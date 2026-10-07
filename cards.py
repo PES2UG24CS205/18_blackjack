@@ -30,3 +30,8 @@ def hand_value(hand):
         value -= 10
         aces -= 1
     return value
+
+
+def is_blackjack(hand):
+    """A natural: exactly two cards totalling 21 (Ace + 10-value card)."""
+    return len(hand) == 2 and hand_value(hand) == 21
